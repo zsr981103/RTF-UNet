@@ -5,25 +5,42 @@ This repository contains the implementation of RTF-UNet, a time–frequency doma
 RTF-UNet supports flexible configuration for time-domain, frequency-domain, or time–frequency-domain feature learning, and allows joint training on synthetic and real field seismic data (marine and land).
 在train.py文件中
 
+
 train.py — Network Training Configuration
+
 
 Network Parameters：
 input_channels：Controls the type of input features:
+
 1: time-domain features
+
 2: frequency-domain features
+
 3: joint time–frequency features
+
 EPOCH：Number of training epochs.
+
 BATCH_SIZE_s：Batch size for the training set.
+
 BATCH_SIZE_v：Batch size for the validation set.
+
 LR：Initial learning rate.
+
 rate：Learning rate decay factor.
+
 iteration：Number of iterations after which the learning rate decays.
 
+
 Data Loading Parameters：
+
 use_real_dat：Whether to include real field seismic data in the training set.
+
 data_path：Path to synthetic seismic data.
+
 data_sea_path, data_land_path：Paths to field seismic data (marine and land).
+
 data_clean_sea_path, data_clean_land_path：Paths to the denoised (clean) field seismic data.
+
 
 Output and Model Saving：
 results_dir：Directory for saving all output files.
